@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc2649a9-3c2f-4557-aef1-a8206e1197f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/material3/Paso01Textfield.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S05Modifier.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S06Estado.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S07StateHoisting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/01_hello_world.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/01_hello_world.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/02_declaracion_variables.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/03_tipos_numericos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/03_tipos_numericos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/04_strings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/04_strings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/05_readline.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/05_readline.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/06_operadores_aritmeticos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/06_operadores_aritmeticos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/07_operadores_comparacion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/07_operadores_comparacion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/08_operadores_logicos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/08_operadores_logicos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/09_if_simple.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/09_if_simple.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/10_if_else.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/10_if_else.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/11_if_multiple.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/11_if_multiple.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/12_if_anidado.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/12_if_anidado.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/13_when.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/13_when.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/14_when_condiciones.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/14_when_condiciones.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/15_when-con_codigos.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/16_ciclo_for.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/16_ciclo_for.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/17_ciclo_while.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/17_ciclo_while.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/18_ciclo_repeat.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/19_funciones.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../modulo_1/basics/19_funciones.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/20_lists.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/21_set.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/22_,map.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/23_utilidades_list.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/24_poo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/25_poo_encapsulamiento.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/26_poo_ejemplos.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/27_poo_val_vs_var.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/28_poo_init.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/29_poo_getter_setter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/30_poo_constructores_secundarios.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/31_poo_modelos.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/32_poo_singleton.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/33_poo_enum.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/34_productos.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/35_herencia.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/36_polimorfismo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/37_clase_abstracta.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/38_interfaces_por_defecto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/basics/39_poo_consolidado.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/01_hello_world_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/02_declaracion_variables_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/03_tipos_numericos_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/04_strings_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/05_readline_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/06_operadores_aritmeticos_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/07_operadores_comparacion_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/08_operadores_logicos_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/09_if_simple_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/10_if_else_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/11_if_multiple_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/12_if_anidado_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/13_when_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/14_when_condiciones_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/15_when-con_codigos_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/16_ciclo_for_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/17_ciclo_while_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/18_ciclo_repeat_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/19_funciones_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/20_lists_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/21_set_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/22_,map_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modulo_1/mp/23_utilidades_list_mp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/MainActivityHelloWorld.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/model/Contacto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/model/Contacto.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S01Saludo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S01Saludo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S02Text.kt" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S02Text.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S03Button.kt" beforeDir="false" afterPath="$PROJECT_DIR$/compose/app/src/main/java/com/ute/compose/ui/screens/S03Button.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/compose/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/compose/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/compose/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/compose/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/compose/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/compose/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/java/com/ute/tts/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/java/com/ute/tts/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/java/com/ute/tts/MainActivityMultimedia.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/java/com/ute/tts/MainActivityMultimedia.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/java/com/ute/tts/MainActivitytTts.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/drawable/logo_ute.png" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/drawable/logo_ute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_calculator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_calculator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_contador.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_contador.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_multimedia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_multimedia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/layout/activity_main_tts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tts/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tts/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tts/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tts/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/tts/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tts/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Script Gradle.gradle" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3DM6TbCr94sXB8MMsjcV0xoH0wW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Primer__Corte",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Y:/programacion_4_manana_lidioma/modulo_2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Y:\programacion_4_manana_lidioma\modulo_2\compose\app\src\main\java\com\ute\compose\ui\screens" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc2649a9-3c2f-4557-aef1-a8206e1197f6" name="Changes" comment="" />
+      <created>1778079600281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778079600281</updated>
+    </task>
+    <servers />
+  </component>
+</project>
