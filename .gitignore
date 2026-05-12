@@ -1,0 +1,72 @@
+# =========================================================
+# .gitignore Universal: React Native, Kotlin & Flutter
+# Cubre carpeta principal y subcarpetas recursivamente
+# =========================================================
+
+# --- Archivos del Sistema y Editores ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.iml
+*.iws
+*.suo
+*.user
+
+# --- Node / React Native (Recursivo) ---
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.env
+**/.env.local
+**/.eslintcache
+
+# React Native iOS
+**/ios/build/
+**/ios/Pods/
+**/ios/DerivedData/
+**/ios/*.xcworkspace
+**/ios/.xcode.env.local
+
+# --- Flutter (Recursivo) ---
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/.pub-cache/
+**/.pub/
+**/build/
+**/lib/generated_plugin_registrant.dart
+**/ios/.generated/
+
+# --- Android / Kotlin (Recursivo) ---
+**/.gradle/
+**/build/
+**/captures/
+**/android/.gradle/
+**/android/build/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# Archivos de firma y secretos (¡IMPORTANTE!)
+*.keystore
+*.jks
+*.p12
+*.key
+**/local.properties
+
+# --- Herramientas de Despliegue ---
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# --- Logs y Temporales ---
+**/logs
+*.log
+**/tmp/
