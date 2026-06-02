@@ -1,57 +1,39 @@
 fun main() {
-    println("Utilidades List")
-    val numeros = listOf(1,2,3,4,5,6,7,8,9,10)
-    println(numeros)
-    val cuadrados = numeros.map{it*it}
-    println(cuadrados)
-    val numerosTexto = numeros.map{"Num$it"}
-    println(numerosTexto)
-    
-    
-    println("Filter")
-    val pares = numeros.filter{it % 2 == 0}
-    println(pares)
-    val mayores5 = numeros.filter{it > 5}
-    println(mayores5)
-    val paresYMayores5 = numeros.filter{it % 2 == 0 && it > 5}
-    println(paresYMayores5)
-    val impares = numeros.filterNot{it % 2 == 0}
-    println(impares)
-    
-    val mezcla= listOf(1,"Hola",2,"Mundo",true,42)
-    val soloStrings=mezcla.filterIsInstance<String>()
-    println(soloStrings)
-    
-    println("Reduce")
-    val numerosReduce = listOf(1,2,3,4,5)
-    val suma = numerosReduce.reduce {acc, n -> acc + n}
-    println(suma)
-    val producto = numerosReduce.reduce {acc, n -> acc * n}
-    println(producto)
-    
-    println("Fold")
-    val sumaFold = numerosReduce.fold(100) {acc, n -> acc + n}
-    println(sumaFold)
-    val productoFold = numerosReduce.fold(100) {acc, n -> acc * n}
-    println(productoFold)
-    
-    println("Ordenacion")
-    println("Ascendente: ${numeros.sorted()}")
-    println("Descendente: ${numeros.sortedDescending()}")
-    println("Sort by: ${numeros.sortedBy{-it}}")
-    println("Agregacion")
-    println("Sumar: ${numeros.sum()}")
-    println("Promedio: ${numeros.average()}")
-    println("Min: ${numeros.min()}")
-    println("Max: ${numeros.max()}")
-    println("Contar: ${numeros.count{it > 4}}")
-    println("Busqueda")
-    println("Buscar: ${numeros.find{it > 4}}")
-    println("Buscar ultimo: ${numeros.findLast{it > 4}}")
-    println("Buscar any: ${numeros.any{it > 4}}")
-    println("Buscar all: ${numeros.all{it > 0}}")
-    println("Buscar none: ${numeros.none{it > 10}}")
-    
+    println("Utilidades List - Gestión de vuelos")
+    val vuelos = listOf(
+        Triple("AV101", "Bogotá", 120),
+        Triple("AV202", "Medellín", 90),
+        Triple("AV303", "Cali", 110),
+        Triple("AV404", "Cartagena", 150),
+        Triple("AV505", "Lima", 180)
+    )
+
+    println("Códigos de vuelo: ${vuelos.map { it.first }}")
+    val duraciones = vuelos.map { it.third }
+    println("Duraciones: $duraciones")
+    val vuelosLargos = vuelos.filter { it.third > 120 }
+    println("Vuelos con duración >120 min: ${vuelosLargos.map { it.first }}")
+
+    val soloDestinos = vuelos.map { it.second }
+    println("Destinos: $soloDestinos")
+
+    val mezcla = listOf(1, "AV101", true, "Bogotá", 120)
+    val soloStrings = mezcla.filterIsInstance<String>()
+    println("Elementos string mixtos: $soloStrings")
+
+    println("Reduce / Fold sobre duraciones")
+    val sumaDuraciones = duraciones.reduce { acc, n -> acc + n }
+    println("Suma duraciones: $sumaDuraciones")
+    val promedioDuracion = duraciones.average()
+    println("Promedio duración: $promedioDuracion")
+
+    println("Ordenación por duración ascendente: ${vuelos.sortedBy { it.third }}")
+    println("Ordenación por duración descendente: ${vuelos.sortedByDescending { it.third }}")
+
+    println("Agregación: Total minutos: ${duraciones.sum()}")
+    println("Contar vuelos > 100min: ${duraciones.count { it > 100 }}")
+    println("Buscar primer vuelo >100min: ${vuelos.find { it.third > 100 }?.first}")
+    println("Existe algún vuelo a Lima?: ${vuelos.any { it.second == "Lima" }}")
 }
 
 

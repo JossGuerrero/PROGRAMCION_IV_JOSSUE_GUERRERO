@@ -21,5 +21,5 @@ void main() {
   final tarifaTotal = precio * (1 + impuesto);
   print('Vuelo: $vueloId ($matricula) — $origen → $destino');
   print('Plazas: $plazas, Escalas: $escalas, Puntual: $enHora');
-  print('Tarifa final: \\$${tarifaTotal.toStringAsFixed(2)}');
+  print('Tarifa final: \$${tarifaTotal.toStringAsFixed(2)}');
 }

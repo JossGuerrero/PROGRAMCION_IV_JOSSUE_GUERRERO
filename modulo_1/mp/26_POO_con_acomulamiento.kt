@@ -1,29 +1,28 @@
-class CuentaBancaria(titular: String, saldoInicial: Double) {
+class AerolineaCuenta(nombreEmpresa: String, saldoInicial: Double) {
 
-    val titular: String = titular       // público — cualquiera puede leer
+    val nombreEmpresa: String = nombreEmpresa
 
-    private var saldo: Double = saldoInicial  // privado — solo esta clase lo modifica
+    private var saldo: Double = saldoInicial
 
-    internal val numeroCuenta: String =        // internal — visible en el mismo módulo
-        "ES${(100000..999999).random()}"
+    internal val codigoEmpresa: String =
+        "AL${(1000..9999).random()}"
 
-    protected open fun calcularInteres(): Double = saldo * 0.02  // protected — visible en subclases
+    protected open fun calcularComision(): Double = saldo * 0.01
 
-    // El saldo solo cambia a través de estos métodos — NUNCA directamente
-    fun depositar(monto: Double) {
+    fun ingresarFondos(monto: Double) {
         require(monto > 0) { "El monto debe ser positivo" }
         saldo += monto
-        println("Depositado: $${"%.2f".format(monto)} | Nuevo saldo: ${consultarSaldo()}")
+        println("Ingresado: $${"%.2f".format(monto)} | Nuevo saldo: ${consultarSaldo()}")
     }
 
-    fun retirar(monto: Double): Boolean {
+    fun pagarServicio(monto: Double): Boolean {
         require(monto > 0) { "El monto debe ser positivo" }
         if (monto > saldo) {
-            println("Fondos insuficientes")
+            println("Fondos insuficientes para pagar el servicio")
             return false
         }
         saldo -= monto
-        println("Retirado: $${"%.2f".format(monto)} | Nuevo saldo: ${consultarSaldo()}")
+        println("Pagado: $${"%.2f".format(monto)} | Nuevo saldo: ${consultarSaldo()}")
         return true
     }
 
@@ -31,13 +30,10 @@ class CuentaBancaria(titular: String, saldoInicial: Double) {
 }
 
 fun main() {
-    val cuenta = CuentaBancaria("Ana García", 1000.0)
-
-    cuenta.depositar(500.0)    // Depositado: $500.00 | Nuevo saldo: $1500.00
-    cuenta.retirar(200.0)      // Retirado: $200.00 | Nuevo saldo: $1300.00
-    cuenta.retirar(2000.0)     // Fondos insuficientes
-
-    println(cuenta.titular)         // Ana García — acceso público permitido
-    println(cuenta.consultarSaldo()) // $1300.00
-    // cuenta.saldo = 999999.0       // ERROR — saldo es privado
+    val cuenta = AerolineaCuenta("AeroFast", 5000.0)
+    cuenta.ingresarFondos(1500.0)
+    cuenta.pagarServicio(300.0)
+    cuenta.pagarServicio(10000.0)
+    println(cuenta.nombreEmpresa)
+    println(cuenta.consultarSaldo())
 }

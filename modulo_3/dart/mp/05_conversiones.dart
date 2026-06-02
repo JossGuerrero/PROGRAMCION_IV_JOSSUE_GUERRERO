@@ -9,7 +9,7 @@ void main() {
   // Precio en texto a double
   String precioTexto = '249.50';
   double precio = double.tryParse(precioTexto) ?? 0.0;
-  print('Precio: \\$${precio.toStringAsFixed(2)}');
+  print('Precio: \$' + precio.toStringAsFixed(2));
 
   // Validación de tipo
   Object valor = 180;

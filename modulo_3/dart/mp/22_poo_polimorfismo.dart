@@ -26,5 +26,3 @@ void main() {
   cobrar(mp1, 199.99);
   cobrar(mp2, 50.0);
 }
-  print('${figura.nombre}: ${figura.calcularArea().toStringAsFixed(2)} u²');
-

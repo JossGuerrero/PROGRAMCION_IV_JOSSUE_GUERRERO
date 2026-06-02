@@ -1,21 +1,20 @@
-class Usuario(val nombre: String, val email: String) {
+class Reserva(val nombrePasajero: String, val codigoVuelo: String) {
     val nombreNormalizado: String
-    val dominioEmail: String
+    val codigoNormalizado: String
 
     init {
-        // Encapsulamiento en acción: validamos antes de construir
-        require(nombre.isNotBlank()) { "El nombre no puede estar vacío" }
-        require(email.contains("@")) { "Email inválido: $email" }
+        require(nombrePasajero.isNotBlank()) { "El nombre del pasajero no puede estar vacío" }
+        require(codigoVuelo.matches(Regex("[A-Z]{2}[0-9]{3}"))) { "Código de vuelo inválido: $codigoVuelo" }
 
-        nombreNormalizado = nombre.trim().lowercase()
-        dominioEmail      = email.substringAfter("@")
+        nombreNormalizado = nombrePasajero.trim().replace("\\s+".toRegex(), " ")
+        codigoNormalizado = codigoVuelo.uppercase()
     }
 }
 
 fun main() {
-    val u = Usuario("  Ana García  ", "ana@kotlin.dev")
-    println(u.nombreNormalizado)  // ana garcía
-    println(u.dominioEmail)       // kotlin.dev
+    val r = Reserva("  Ana García  ", "AV123")
+    println(r.nombreNormalizado)
+    println(r.codigoNormalizado)
 
-    // Usuario("", "invalido")   // IllegalArgumentException — require falla
+    // Reserva("", "XXX") // Error por validación
 }
