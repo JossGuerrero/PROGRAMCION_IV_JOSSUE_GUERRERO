@@ -4,10 +4,8 @@ class Avion {
 
   Avion({required this.matricula, required this.capacidad});
 
-  // Constructor nombrado para modelos pequeños
   Avion.pequeno() : matricula = 'SM-100', capacidad = 50;
 
-  // Factory para crear desde mapa de datos
   factory Avion.fromMap(Map<String, dynamic> m) {
     return Avion(matricula: m['matricula'], capacidad: m['capacidad']);
   }

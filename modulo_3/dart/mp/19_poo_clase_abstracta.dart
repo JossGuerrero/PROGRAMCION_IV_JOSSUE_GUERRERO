@@ -1,4 +1,3 @@
-// Abstracción de aeronave
 abstract class Aeronave {
   String get id;
   void despegar();

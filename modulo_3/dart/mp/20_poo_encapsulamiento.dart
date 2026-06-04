@@ -1,7 +1,7 @@
 class Reserva {
   final String pasajero;
   final String vueloId;
-  int _asientos; // privado
+  int _asientos;
 
   Reserva(this.pasajero, this.vueloId, int asientos) : _asientos = asientos;
 

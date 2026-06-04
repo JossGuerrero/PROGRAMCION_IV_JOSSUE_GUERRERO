@@ -1,5 +1,3 @@
-// Funciones básicas para calcular tarifas y formatear información
-
 double calcularTarifaBase(double distanciaKm, double tarifaPorKm) {
   return distanciaKm * tarifaPorKm;
 }
@@ -11,7 +9,7 @@ void imprimirResumenVuelo(String vuelo, String origen, String destino, double pr
 }
 
 void main() {
-  final base = calcularTarifaBase(500.0, 0.35); // ejemplo: 500 km
+  final base = calcularTarifaBase(500.0, 0.35);
   final total = aplicarImpuestos(base, 0.12);
   imprimirResumenVuelo('AV123', 'BOG', 'MDE', total);
 }

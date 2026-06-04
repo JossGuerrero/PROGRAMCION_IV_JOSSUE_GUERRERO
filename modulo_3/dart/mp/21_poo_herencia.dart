@@ -1,4 +1,3 @@
-// Herencia aplicada a personas en el entorno aeroportuario
 class Persona {
   final String nombre;
   Persona(this.nombre);

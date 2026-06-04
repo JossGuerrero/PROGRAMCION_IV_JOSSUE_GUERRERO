@@ -5,11 +5,9 @@ void main() {
     {'id': 'AV200', 'precio': 179.0, 'plazas': 12},
   ];
 
-  // map: extraer IDs
   final ids = vuelos.map((v) => v['id']);
   print('IDs: ${ids.toList()}');
 
-  // reduce/fold: total de plazas
   final totalPlazas = vuelos.map((v) => (v['plazas'] as int)).fold(0, (a, b) => a + b);
   print('Total plazas disponibles: $totalPlazas');
 }
