@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
+// CustomizedSizedBox — Selección de asientos: espaciado, sangría,
+// alineación y etiquetas de características del asiento.
 class CustomizedSizedBox extends StatelessWidget {
- 
+
   const CustomizedSizedBox({
-    super.key, 
-    required this.height, 
+    super.key,
+    required this.height,
     required this.width, required MainAxisAlignment mainAxisAlignment, required List<Widget> children,
   });
 
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,9 @@ class CustomizedSizedBox extends StatelessWidget {
           // SizedBox — espaciado fijo
           const Text('SizedBox', style: TextStyle(fontWeight: FontWeight.bold)),
           const SizedBox(height: 8),
-          const Text('Primer elemento'),
+          const Text('Asiento 12A reservado'),
           const SizedBox(height: 32),          // ← espacio fijo de 32px
-          const Text('Segundo elemento (después de 32px)'),
+          const Text('Asiento 12B disponible (después de 32px)'),
 
           const Divider(height: 32),
 
@@ -32,7 +34,7 @@ class CustomizedSizedBox extends StatelessWidget {
             color: Colors.indigo.shade50,
             child: const Padding(
               padding: EdgeInsets.only(left: 24),    // ← sangría izquierda
-              child:   Text('Texto con Padding izquierdo'),
+              child:   Text('Equipaje de mano: 1 pieza'),
             ),
           ),
 
@@ -43,7 +45,7 @@ class CustomizedSizedBox extends StatelessWidget {
           const SizedBox(height: 8),
           const Align(
             alignment: Alignment.centerRight,        // ← borde derecho
-            child: Icon(Icons.settings, color: Colors.indigo),
+            child: Icon(Icons.event_seat, color: Colors.indigo),
           ),
 
           const Divider(height: 32),
@@ -54,7 +56,7 @@ class CustomizedSizedBox extends StatelessWidget {
           Wrap(
             spacing:    8,
             runSpacing: 8,
-            children: ['Buseta', 'A/C Activo', 'Rampa', 'IPv6', 'Load Balancer', 'CDN', 'WAF']
+            children: ['Ventana', 'Pasillo', 'Extra espacio', 'Salida de emergencia', 'Wifi a bordo', 'Comida incluida', 'Reclinable']
                 .map((t) => Chip(label: Text(t)))
                 .toList(),
           ),
@@ -62,4 +64,3 @@ class CustomizedSizedBox extends StatelessWidget {
       );
   }
 }
-    

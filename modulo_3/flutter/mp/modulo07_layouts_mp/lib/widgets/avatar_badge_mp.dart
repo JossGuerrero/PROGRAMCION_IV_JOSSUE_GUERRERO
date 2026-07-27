@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+// AvatarBadge — Puerta de abordaje con estado (abierta/cerrada)
+// y cantidad de pasajeros en lista de espera (standby).
 class AvatarBadge extends StatelessWidget {
-  final String nombre;
-  final int    alertas;
-  final bool   activo;
+  final String nombre;   // Código de puerta, ej. 'B12'
+  final int    alertas;  // Pasajeros en standby
+  final bool   activo;   // true = puerta abierta para abordaje
 
   const AvatarBadge({
     super.key,
@@ -17,7 +19,7 @@ class AvatarBadge extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,   // permite que el badge salga del Stack
       children: [
-        // Avatar — capa inferior
+        // Puerta de abordaje — capa inferior
         Container(
           width:  56,
           height: 56,
@@ -37,7 +39,7 @@ class AvatarBadge extends StatelessWidget {
           ),
         ),
 
-        // Punto de estado — esquina inferior derecha
+        // Punto de estado — esquina inferior derecha (abierta / cerrada)
         Positioned(
           bottom: 0, right: 0,
           child: Container(
@@ -51,7 +53,7 @@ class AvatarBadge extends StatelessWidget {
           ),
         ),
 
-        // Badge de alertas — capa superior, solo si las hay
+        // Badge de pasajeros en standby — capa superior, solo si hay
         if (alertas > 0)
           Positioned(
             top: -4, right: -4,

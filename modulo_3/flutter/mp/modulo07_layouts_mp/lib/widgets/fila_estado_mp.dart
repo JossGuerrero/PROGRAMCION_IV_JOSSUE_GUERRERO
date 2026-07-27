@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+// FilaEstado — Fila de la lista de pasajeros (nombre, asiento, si ya abordó)
 class FilaEstado extends StatelessWidget {
-  final String nombre;
-  final String detalle;
-  final bool   activo;
+  final String nombre;   // Nombre del pasajero
+  final String detalle;  // Asiento y clase, ej. '14C · Clase Turista'
+  final bool   activo;   // true = ya abordó
   final bool message;
 
   const FilaEstado({
@@ -20,10 +21,10 @@ class FilaEstado extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       child: Row(
         children: [
-          // Ícono de estado
+          // Ícono de estado de abordaje
           Icon(
-            activo ? Icons.circle : Icons.cancel,
-            
+            activo ? Icons.airplanemode_active : Icons.schedule,
+
             color: activo ? Colors.green : Colors.red,
             size:  20,
           ),
@@ -54,7 +55,7 @@ class FilaEstado extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
-              activo ? 'Activo' : 'Caído',
+              activo ? 'Abordo' : 'Pendiente',
               style: TextStyle(
                 fontSize:   11,
                 color:      activo ? Colors.green.shade700 : Colors.red.shade700,

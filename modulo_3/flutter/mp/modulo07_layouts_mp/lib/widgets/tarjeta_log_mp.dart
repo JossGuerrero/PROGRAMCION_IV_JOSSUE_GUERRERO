@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+// TarjetaLog — Estado de vuelo (ej. UIO ➔ GYE)
 class TarjetaLog extends StatelessWidget {
-  final String   nivel;        // DEBUG, INFO, WARN, ERROR
-  final String   componente;
-  final String   mensaje;
-  final DateTime timestamp;
+  final String   nivel;        // A TIEMPO, EMBARCANDO, DEMORADO, CANCELADO
+  final String   componente;   // Número de vuelo, ej. 'AV204'
+  final String   mensaje;      // Detalle del estado (ruta, puerta, hora estimada)
+  final DateTime timestamp;    // Última actualización
 
   const TarjetaLog({
     super.key,
@@ -15,11 +16,11 @@ class TarjetaLog extends StatelessWidget {
   });
 
   Color get _colorNivel => switch (nivel) {
-    'DEBUG' => Colors.grey,
-    'INFO'  => Colors.blue,
-    'WARN'  => Colors.orange,
-    'ERROR' => Colors.red,
-    _       => Colors.grey,
+    'A TIEMPO'    => Colors.green,
+    'EMBARCANDO'  => Colors.blue,
+    'DEMORADO'    => Colors.orange,
+    'CANCELADO'   => Colors.red,
+    _             => Colors.grey,
   };
 
   @override
