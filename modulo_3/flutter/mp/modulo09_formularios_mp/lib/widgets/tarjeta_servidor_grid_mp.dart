@@ -1,0 +1,85 @@
+// lib/widgets/tarjeta_servidor_grid_mp.dart
+import 'package:flutter/material.dart';
+import '../models/servidor_ssh_mp.dart';
+
+class TarjetaBusGrid extends StatelessWidget {
+  final BusSSH  bus;
+  final VoidCallback onFavorito;
+  final VoidCallback onEliminar;
+
+  const TarjetaBusGrid({
+    super.key,
+    required this.bus,
+    required this.onFavorito,
+    required this.onEliminar,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final cs   = Theme.of(context).colorScheme;
+    final text = Theme.of(context).textTheme;
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Fila superior: icono + favorito
+            Row(children: [
+              Icon(
+                Icons.flight,
+                color: bus.clima ? cs.primary : cs.outline,
+                size: 18,
+              ),
+              const Spacer(),
+              GestureDetector(
+                onTap: onFavorito,
+                child: Icon(
+                  bus.favorito ? Icons.star : Icons.star_border,
+                  color: bus.favorito ? Colors.amber : cs.outline,
+                  size: 18,
+                ),
+              ),
+            ]),
+            const SizedBox(height: 6),
+
+            // Vuelo y ruta
+            Text(
+              bus.nombre,
+              style: text.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text(
+              bus.ruta,
+              style: text.bodySmall?.copyWith(color: cs.onSurfaceVariant),
+            ),
+
+            const Spacer(),
+
+            // Fila inferior: wifi + aeronave + eliminar
+            Row(children: [
+              if (bus.clima)
+                Padding(
+                  padding: const EdgeInsets.only(right: 4),
+                  child: Icon(Icons.wifi, size: 12, color: cs.primary),
+                ),
+              Expanded(
+                child: Text(
+                  bus.modelo,
+                  style: text.labelSmall?.copyWith(color: cs.onSurfaceVariant),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              GestureDetector(
+                onTap: onEliminar,
+                child: Icon(Icons.delete_outline, size: 16, color: cs.error),
+              ),
+            ]),
+          ],
+        ),
+      ),
+    );
+  }
+}
