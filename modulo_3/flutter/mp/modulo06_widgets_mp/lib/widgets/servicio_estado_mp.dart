@@ -54,7 +54,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
         children: [
 
           Icon(
-            _activo ? Icons.location_on : Icons.location_off,
+            _activo ? Icons.flight : Icons.airplanemode_off,
             size:  72,
             color: _obtenerColorIcono(),
           ),
@@ -65,7 +65,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
 
           // Agregado fontStyle condicional
           Text(
-            _activo ? 'En línea' : 'Fuera de línea',
+            _activo ? 'En vuelo' : 'En tierra',
             style: TextStyle(
               fontSize:   15,
               fontWeight: FontWeight.w600,
@@ -99,7 +99,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
           ElevatedButton.icon(
             onPressed: enLimite ? null : _toggle,
             icon: Icon(_activo ? Icons.stop : Icons.play_arrow),
-            label: Text(_activo ? 'Detener servicio' : 'Iniciar servicio'),
+            label: Text(_activo ? 'Detener vuelo' : 'Iniciar vuelo'),
             style: ElevatedButton.styleFrom(
               backgroundColor: _activo ? Colors.red.shade600 : Colors.green.shade600,
             ),
@@ -110,7 +110,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
           Opacity(
             opacity: enLimite ? 0.1 : 1.0,
             child: Text(
-              'Llamados al taller: $_llamadosTaller / $_maxLlamadosTaller ($nivel)',
+              'Llamados a mantenimiento: $_llamadosTaller / $_maxLlamadosTaller ($nivel)',
               style: TextStyle(
                 fontSize: 13,
                 color:    enLimite ? Colors.red : Colors.grey.shade600,
@@ -122,7 +122,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
             Padding(
               padding: const EdgeInsets.only(top: 8),
               child: Text(
-                'Límite de llamados al taller alcanzado',
+                'Límite de llamados a mantenimiento alcanzado',
                 style: TextStyle(
                     fontSize: 12, color: Colors.red.shade700, fontWeight: FontWeight.bold),
               ),
@@ -139,7 +139,7 @@ class _ServicioEstadoState extends State<ServicioEstado> {
                 nivel = 'normal';
               });
             },
-            child: const Text('Llamar al taller todo'),
+            child: const Text('Reiniciar todo'),
           ),
         ],
       ),

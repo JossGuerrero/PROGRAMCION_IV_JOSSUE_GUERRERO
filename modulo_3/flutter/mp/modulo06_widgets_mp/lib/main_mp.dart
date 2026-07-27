@@ -17,71 +17,80 @@ import 'package:modulo06_widgets_mp/widgets/servicio_estado_mp.dart';
 // │  7  Paso 5   BuildContext                                        │
 // │  8  Paso 6   Composición de widgets                             │
 // └──────────────────────────────────────────────────────────────────┘
-const int paso = 1;
+const int paso = 8;
 
-void main() => runApp(MaterialApp(
-  debugShowCheckedModeBanner: false,
-  theme: ThemeData(
-    colorScheme:  ColorScheme.fromSeed(
-      seedColor:  Colors.deepPurple,          // ← cambia aquí
-      brightness: Brightness.dark,     // ← Brightness.dark para modo oscuro
+void main() => runApp(
+  MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.deepPurple, // ← cambia aquí
+        brightness: Brightness.dark, // ← Brightness.dark para modo oscuro
+      ),
+      useMaterial3: true,
     ),
-    useMaterial3: true,
+    home: switch (paso) {
+      1 => const Scaffold(body: Center(child: Saludo())),
+      2 => const CatalogoBasicos(),
+      3 => const Scaffold(
+        body: Center(
+          child: Wrap(
+            spacing: 12,
+            runSpacing: 8,
+            children: [
+              Etiqueta(texto: 'A tiempo', color: Colors.green),
+              Etiqueta(texto: 'Cancelado', color: Colors.red, relleno: true),
+              Etiqueta(texto: 'Retrasado', color: Colors.orange),
+              Etiqueta(
+                texto: 'Últ. llam',
+                color: Colors.red,
+                fontSize: 16,
+                relleno: true,
+              ),
+              Etiqueta(texto: 'Info', color: Colors.blue, fontSize: 11),
+            ],
+          ),
+        ),
+      ),
+      4 => const Scaffold(
+        body: Center(child: ServicioEstado(nombre: 'Vuelo AV204')),
+      ),
+      5 => Scaffold(
+        // Paso 3b
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ContadorLimitado(
+                etiqueta: 'Intentos de check-in',
+                limite: 1,
+                color: Colors.deepPurple,
+                textoBoton: 'Intentar',
+                onLimite: () => debugPrint('¡Check-in bloqueado!'),
+              ),
+              const SizedBox(height: 40),
+              ContadorLimitado(
+                etiqueta: 'Escalas activas',
+                limite: 10,
+                color: Colors.indigo,
+                textoBoton: '',
+              ),
+            ],
+          ),
+        ),
+      ),
+      6 => Scaffold(
+        // Paso 4
+        appBar: AppBar(title: const Text('Cronómetro de Vuelo')),
+        body: const Center(child: Reloj()),
+      ),
+      7 => const PantallaContexto(), // Paso 5 — ya tiene su propio Scaffold
+      _ => Scaffold(
+        body: Center(child: Text('Paso $paso: crea el widget primero')),
+      ),
+    },
   ),
-  home: switch (paso) {
-    1 => const Scaffold(body: Center(child: Saludo())),
-    2 => const CatalogoBasicos(),
-    3 => const Scaffold(
-      body: Center(
-        child: Wrap(
-          spacing:    12,
-          runSpacing: 8,
-          children: [
-            Etiqueta(texto: 'Activo',    color: Colors.green),
-            Etiqueta(texto: 'Error',     color: Colors.red,    relleno: true),
-            Etiqueta(texto: 'En espera', color: Colors.orange),
-            Etiqueta(texto: 'Crítico',   color: Colors.red,    fontSize: 16, relleno: true),
-            Etiqueta(texto: 'Info',      color: Colors.blue,   fontSize: 11),
-          ],
-        ),
-      ),
-    ),
-    4 => const Scaffold(
-      body: Center(
-        child: ServicioEstado(nombre: 'Ruta 42'),
-      ),
-    ),
-    5 => Scaffold(                               // Paso 3b
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ContadorLimitado(
-              etiqueta: 'Intentos de encendido',
-              limite:   1,
-              color:    Colors.deepPurple,
-              textoBoton: 'Intentar',
-              onLimite: () => debugPrint('¡Cuenta bloqueada!'),
-            ),
-            const SizedBox(height: 40),
-            ContadorLimitado(
-              etiqueta: 'Paradas activas',
-              limite:   10,
-              color:    Colors.indigo, textoBoton: '',
-            ),
-          ],
-        ),
-      ),
-    ),
-    6 => Scaffold(                              // Paso 4
-      appBar: AppBar(title: const Text('Cronómetro')),
-      body: const Center(child: Reloj()),
-    ),
-    7 => const PantallaContexto(),    // Paso 5 — ya tiene su propio Scaffold
-    _ => Scaffold(body: Center(child: Text('Paso $paso: crea el widget primero'))),
-  },
-  
-));
+);
 
 class Saludo extends StatelessWidget {
   const Saludo({super.key});
@@ -90,7 +99,7 @@ class Saludo extends StatelessWidget {
   Widget build(BuildContext context) {
     // describe cómo se ve
     return const SelectableText(
-      'La nueva flota de buses articulados para la troncal norte-sur ya está lista. Con este despliegue, el tiempo de espera en estaciones se reducirá drásticamente y mejorará la experiencia de los pasajeros.',
+      'La nueva ruta directa a Tokio ya está lista para operar. Con este vuelo, el tiempo de conexión en escalas se reducirá drásticamente y mejorará la experiencia de los pasajeros.',
       style: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
@@ -98,7 +107,7 @@ class Saludo extends StatelessWidget {
         color: Colors.deepPurple,
         shadows: [
           Shadow(color: Colors.black26, blurRadius: 4, offset: Offset(4, 4)),
-        ]
+        ],
       ),
       textAlign: TextAlign.left,
       //overflow: TextOverflow.ellipsis,

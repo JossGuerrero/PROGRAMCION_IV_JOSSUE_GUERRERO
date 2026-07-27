@@ -20,7 +20,7 @@ class PantallaContexto extends StatelessWidget {
         backgroundColor: colores.secondaryContainer,
         foregroundColor: colores.onSecondaryContainer,
         title: Text(
-          'Panel ${esMovil ? "móvil del Conductor" : "central de Despacho"} · ${esRetrato ? "Vertical" : "Horizontal"}',
+          'Panel ${esMovil ? "móvil del Piloto" : "central de Control de Vuelos"} · ${esRetrato ? "Vertical" : "Horizontal"}',
           style: tema.textTheme.titleMedium,
         ),
       ),
@@ -29,7 +29,7 @@ class PantallaContexto extends StatelessWidget {
         children: [
           // ── Información de pantalla ────────────────────────────
           _Seccion(
-            titulo: 'Datos del Vehículo / Panel',
+            titulo: 'Datos de la Aeronave / Panel',
             items: [
               'Ancho de Cabina:      ${tamanio.width.toStringAsFixed(0)} px',
               'Alto de Panel:        ${tamanio.height.toStringAsFixed(0)} px',

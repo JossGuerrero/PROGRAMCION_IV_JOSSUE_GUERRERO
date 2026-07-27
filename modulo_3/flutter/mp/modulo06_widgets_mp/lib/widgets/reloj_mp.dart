@@ -103,7 +103,7 @@ class _RelojState extends State<Reloj> {
                 _tiemposVuelta.clear();
                 _iniciarTimer();
               }),
-              child: const Text('Llamar al taller'),
+              child: const Text('Reiniciar vuelo'),
             ),
           ],
         ),

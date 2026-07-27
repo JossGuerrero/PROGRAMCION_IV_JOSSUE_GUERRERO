@@ -6,14 +6,14 @@ class CatalogoBasicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Widgets básicos')),
+      appBar: AppBar(title: const Text('Catálogo de Vuelos')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           // ← pega aquí cada bloque al avanzar
           // ── Text básico ───────────────────────────────────────────────────────
           const Text(
-            'bus-articulado-01: En línea',
+            'vuelo-AV204: En línea',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold, // .w100–.w900  ·  .bold = .w700
@@ -31,7 +31,7 @@ class CatalogoBasicos extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: Text(
-              'Terminal Central - Región Norte → fuera de servicio',
+              'Aeropuerto El Dorado - Terminal 1 → vuelo cancelado',
               textAlign:
                   TextAlign.justify, // .left  .right  .justify  .start  .end
               maxLines: 2,
@@ -67,7 +67,7 @@ class CatalogoBasicos extends StatelessWidget {
 
           // ── SelectableText — el usuario puede seleccionar y copiar ───────────
           const SelectableText(
-            'Placa: ABC-1234',
+            'Vuelo: AV-1234',
             style: TextStyle(fontFamily: 'monospace', fontSize: 14),
           ),
           const Divider(height: 32),
@@ -79,8 +79,8 @@ class CatalogoBasicos extends StatelessWidget {
               Icon(Icons.check_circle, size: 80, color: Theme.of(context).colorScheme.primary),
               const Icon(Icons.cancel, size: 80, color: Colors.red),
               const Icon(Icons.warning_amber, size: 80, color: Colors.orange),
-              const Icon(Icons.directions_bus, size: 14, color: Colors.indigo),
-              const Icon(Icons.location_off, size: 14, color: Colors.grey),
+              const Icon(Icons.flight, size: 14, color: Colors.indigo),
+              const Icon(Icons.airplanemode_off, size: 14, color: Colors.grey),
               
 
               
@@ -91,7 +91,7 @@ class CatalogoBasicos extends StatelessWidget {
             Icons.settings,
             size: 24,
             color: Colors.blueGrey,
-            semanticLabel: 'Ajustes de Ruta',
+            semanticLabel: 'Ajustes de Vuelo',
           ), // leído por lectores de pantalla
           const Divider(height: 32),
 
@@ -122,19 +122,19 @@ class CatalogoBasicos extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.refresh, size: 18),
-                label: const Text('Llamar al taller'),
+                label: const Text('Reprogramar vuelo'),
               ),
               FilledButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.stop, size: 18),
-                label: const Text('Detener'),
+                label: const Text('Cancelar vuelo'),
               ),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.settings),
                 color: Colors.indigo,
                 iconSize: 28,
-                tooltip: 'Detiene todas las rutas'
+                tooltip: 'Cancela todos los vuelos'
               ),
             ],
           ),
@@ -152,7 +152,7 @@ class CatalogoBasicos extends StatelessWidget {
                // ocupa todo el ancho
             ),
             child: const Text(
-              'Acción crítica',
+              'Aterrizaje de emergencia',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
@@ -169,9 +169,9 @@ class CatalogoBasicos extends StatelessWidget {
             color: Colors.red.shade50,
             child: ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              leading: const Icon(Icons.directions_bus, color: Colors.indigo),
-              title: const Text('Ruta 42'),
-              subtitle: const Text('Aunque la NOAA detectó condiciones asociadas al fenómeno y modelos anticipan un evento entre moderado y fuerte, aún no hay evidencias lo que serán los impactos.'),
+              leading: const Icon(Icons.flight_takeoff, color: Colors.indigo),
+              title: const Text('Vuelo AV204'),
+              subtitle: const Text('Aunque el pronóstico meteorológico detectó condiciones asociadas al fenómeno y los modelos anticipan turbulencia entre moderada y fuerte, aún no hay evidencias de que se requiera cancelar el vuelo.'),
               trailing: const Icon(Icons.circle, color: Colors.green, size: 12),
               isThreeLine: true,
               onTap: () {}, // toda la fila queda tocable
@@ -184,8 +184,8 @@ class CatalogoBasicos extends StatelessWidget {
                 backgroundColor: Colors.red.shade100,
                 child: const Icon(Icons.cancel, color: Colors.red, size: 20),
               ),
-              title: const Text('Bus-Respaldo'),
-              subtitle: const Text('fuera de servicio · Terminal Sur'),
+              title: const Text('Vuelo de Respaldo'),
+              subtitle: const Text('cancelado · Terminal Sur'),
               trailing: TextButton(onPressed: () {}, child: const Text('Ver')),
             ),
           ),
@@ -194,7 +194,7 @@ class CatalogoBasicos extends StatelessWidget {
             child: SwitchListTile(
               value: false,
               onChanged: (_) {},
-              title: const Text('En el taller'),
+              title: const Text('En mantenimiento'),
             ),
           ),
           const Divider(height: 32),
@@ -204,26 +204,26 @@ class CatalogoBasicos extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              const Chip(label: Text('Buseta')),
-              const Chip(label: Text('Articulado')),
-              const Chip(label: Text('Minibus')),
-              const Chip(label: Text('Tranvía')),
+              const Chip(label: Text('Económica')),
+              const Chip(label: Text('Premium')),
+              const Chip(label: Text('Ejecutiva')),
+              const Chip(label: Text('Primera Clase')),
               const Chip(
                 avatar: Icon(Icons.check, size: 16, color: Colors.white),
-                label: Text('A/C Activo'),
+                label: Text('WiFi Activo'),
                 backgroundColor: Colors.blue,
                 labelStyle: TextStyle(color: Colors.white, fontSize: 12),
               ),
               FilterChip(
                 onDeleted: () {},
                 deleteIcon: const Icon(Icons.close, size: 16),
-                label: const Text('Rampa'),
+                label: const Text('Solo directos'),
                 selected: false,
                 onSelected: (_) {},
                 padding: const EdgeInsets.all(8),
               ),
               ActionChip(
-                label: const Text('Ver ruta'),
+                label: const Text('Ver itinerario'),
                 avatar: const Icon(Icons.open_in_new, size: 16),
                 onPressed: () {},
               ),
